@@ -1,10 +1,6 @@
 body {
-  background-color: #fbe4cf;
+  background-color: #263d3d;
 }
 header {
-  background-color: #263d3d;
-  margin: -1rem;
-  font-family: bely-display, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  margin: -2rem;
 }
