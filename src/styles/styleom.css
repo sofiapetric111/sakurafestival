@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+}
+.boks1 {
+  background-color: #263d3d;
+  padding: 2cm;
+  color: white;
+}
+.boks2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fbe4cf;
+}
+.boks2 img {
+  width: 100%;
+}
+h1 {
+  text-align: center;
+}
+.boks3 {
+  background-color: #d5c0ac;
+  color: #263d3d;
+}
