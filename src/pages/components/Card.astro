@@ -4,16 +4,17 @@
 <section class="card">
     <div class="img_container">
       <img src="/images/Wadaiko.jpg" class="card_image" alt="" />
+      <img src="/images/favorite.png" class="favorite_img" alt="" />
       <div class="overlay_container">
         <div class="overlay_content">
       <p class="text_white">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-      <div>
-    </div>
-    </div>
+      <div class="favorite_container">
         <p class="add_program">Add to 'My Program'</p>
-        <img src="/images/favorite.png" class="favorite" alt="" />
+        <img src="/images/favorite_pink.png" class="favorite_pink" alt="">
       </div>
     </div>
+    </div>
+      </div>
     <div class="card_copy">
       <p class="bold">Titel</p>
       <p>Artist</p>
@@ -34,20 +35,7 @@
       width: 100%;
       margin: 0px;
     }
-  
-    .add_program {
-      position: absolute;
-      top: 87%;
-      left: 17%;
-      color: white;
-    }
-  
-    .favorite {
-      position: absolute;
-      top: 87%;
-      right: 4%;
-      width: 12%;
-    }
+
   
     .text_overlay {
       position: absolute;
@@ -78,10 +66,43 @@
 
     .overlay_container:hover{
         opacity: 1;}
+    
+    /* ------ favorite container ----*/
+
+
+    .favorite_img {
+      position: absolute;
+      top: 87%;
+      right: 4%;
+      width: 12%;
+    }
+
+    .favorite_pink {
+      position: absolute;
+      top: 87%;
+      right: 4%;
+      width: 12%;
+    }
+
+    .favorite_overlay{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    }
+
+    .favorite_overlay:hover{opacity: 1;}
+
+    .add_program {
+    position: absolute;
+  text-align: center;
+    color: white;
+    top:87%;
+    }
 
 
 
-    /* ----- tekst under billede ----- */
+/* ----- tekst under billede ----- */
   
     p {
       margin: 2px;
