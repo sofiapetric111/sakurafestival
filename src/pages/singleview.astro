@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <h1>TITEL</h1>
+  <img src="../images/sakura_img.svg" class="sakura_img" alt="sakura img" />
   <div class="boks2">
     <img src="public/images/tea.png" alt="tea" class="tea" />
     <div>
@@ -37,12 +38,20 @@ import MainLayout from "../layouts/MainLayout.astro";
     text-align: center;
     font-size: 70px;
   }
+  .sakura_img {
+    position: absolute;
+    margin-left: 39%;
+    z-index: -1;
+    margin-top: -19%;
+    width: 20%;
+  }
   .boks2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #fbe4cf;
     padding: 2rem;
     gap: 2rem;
+    margin-top: 2%;
   }
   .boks2 p {
     margin-right: 25%;
