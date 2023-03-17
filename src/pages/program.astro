@@ -3,6 +3,45 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../pages/components/Card.astro";
 ---
 <MainLayout>
+    <section class="sakura-tekst">
+        <div class="boks1">
+    <img src="../images/sakura_img.svg" class="sakura_img" alt="sakura img">
+        <h1>PROGRAM </h1>
+      </div>
+      <div class="dato">
+        <h2>SATURDAY 22ND</h2>
+        <h2>SUNDAY 23ND</h2>
+      </div>
+    </section>
+      <section class="main_background">
+      <section>
+        <div class="filter">
+<div><img src="../images/tune.svg" alt="filter"><p>Filter</p></div>
+<p class="btm">MUSIC</p>
+<p class="btm">KIDS</p>
+<p class="btm">WORKSHOP</p>
+<p class="btm">FOOD/DRINKS</p>
+<p class="btm">ART</p>
+<p class="btm">SHOW</p>
+        </div>
+        <div class="Overkrift">
+            <h2>SATURDAY APRIL 22ND</h2>
+        </div>
+      </section>
+      <section class="animation">
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+      </section>
     <section class="grid_5">
     <Card />
     <Card />
@@ -10,13 +49,245 @@ import Card from "../pages/components/Card.astro";
     <Card />
     <Card />
 </section>
+<section class="animation">
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+  </section>
+  <section class="grid_5">
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+</section>
+<section class="animation">
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+  </section>
+  <section class="grid_5">
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+</section>
+<div class="Overkrift">
+    <h2>SUNDAY APRIL 23ND</h2>
+</div>
+<section class="animation2">
+    <p>MAIN STAGE</p>
+    <p>MAIN STAGE</p>
+    <p>MAIN STAGE</p>
+    <p>MAIN STAGE</p>
+    <p>MAIN STAGE</p>
+    <p>MAIN STAGE</p>
+    <p>MAIN STAGE</p>
+    <p>MAIN STAGE</p>
+    <p>MAIN STAGE</p>
+    <p>MAIN STAGE</p>
+    <p>MAIN STAGE</p>
+    <p>MAIN STAGE</p>
+  </section>
+  <section class="grid_5">
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+</section>
+<section class="animation2">
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+    <p>SECOND STAGE</p>
+  </section>
+  <section class="grid_5">
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+</section>
+<section class="animation2">
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+    <p>ON THE LAWN</p>
+  </section>
+  <section class="grid_5">
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+</section>
+</section>
 </MainLayout>
 
 <style>
+    * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .main_background
+  {background-color: rgb(251, 228, 207);}
+
+  /* section 1 */
+  .sakura_img{
+position: absolute;
+margin-left: 34%;
+z-index: -1;
+margin-top: -8%;
+width: 20%;
+  }
+
+  .sakura-tekst h1{
+    z-index: 2;
+  }
+
+  .boks1 {
+    padding: 2cm;
+    color: white;
+    z-index: -2;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 70px;
+  }
+  
+  .dato{
+display: flex;
+justify-content: center;
+margin-top: -5%;
+margin-bottom: 5%;
+color: white;
+gap: 2%;
+  }
+
+  .dato h2{
+    font-weight: 100;
+    font-size: 15px;
+}
+
+ /* section 2 med cards */
+.filter{
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    padding: 3%;
+    color: #263d3d;
+}
+
+.btm{
+    border: 1px solid #263d3d;
+    padding: 1%;
+    width: 100px;
+    text-align: center;
+    color: #263d3d;
+}
+
+.btm:hover{
+    color: white;
+    background-color: #263d3d;
+}
+
+.Overkrift h2{
+    text-align: center;
+    color: #263d3d;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 2%;
+}
+/* styling af animation */
+.animation{
+    display: flex;
+    justify-content: flex-start;
+    background: #Fcaebb;
+    overflow: hidden;
+}
+
+.animation p{
+    color: #263d3d;
+    white-space: nowrap;
+    font-size: 20px;
+    padding: 1%;
+    animation: slide 2000ms linear infinite;
+}
+
+@keyframes slide{
+    0%{
+       transform: translateX(0); 
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+/* styling af animation 2 */
+.animation2{
+    display: flex;
+    justify-content: flex-start;
+    background: #263d3d;
+    overflow: hidden;
+}
+
+.animation2 p{
+    color: #Fcaebb;
+    white-space: nowrap;
+    font-size: 20px;
+    padding: 1%;
+    animation: slide 2000ms linear infinite;
+}
+
+@keyframes slide{
+    0%{
+       transform: translateX(0); 
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+ /* gris*/
 .grid_5{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin-left: 4rem;
     gap: 1%;
+    margin-left: 4%;
+    margin-bottom: 4%;
 }
 </style>
