@@ -1,12 +1,14 @@
 <!--BURGERMENU-->
 <ul class="nav">
-  <div class="left">
-    <img src="public/images/final_logo.png" alt="logo" class="logo" />
-    <div class="sakura_festival">
-      <li>SAKURA</li>
-      <li>FESTIVAL</li>
+  <a href="/">
+    <div class="left">
+      <img src="public/images/final_logo.png" alt="logo" class="logo" />
+      <div class="sakura_festival">
+        <li>SAKURA</li>
+        <li>FESTIVAL</li>
+      </div>
     </div>
-  </div>
+  </a>
   <div class="right">
     <div class="dato">
       <li>22-23</li>
@@ -18,12 +20,12 @@
         <span></span>
       </label>
       <ul class="menu__box">
-        <li><a class="menu__item" href="">PROGRAM</a></li>
+        <li><a class="menu__item" href="/program">PROGRAM</a></li>
         <li><a class="menu__item" href="">INFO</a></li>
         <li><a class="menu__item" href="">MY PAGE</a></li>
         <li><a class="menu__item" href="">SPONSORS</a></li>
         <li><a class="menu__item" href="">VOLUNTEERS</a></li>
-        <li><a class="menu__item" href="">ABOUT US</a></li>
+        <li><a class="menu__item" href="/omos">ABOUT US</a></li>
       </ul>
     </div>
   </div>
@@ -32,6 +34,9 @@
   .logo {
     width: 10%;
   }
+  a {
+    text-decoration: none;
+  }
   .sakura_festival {
     font-family: bely-display, sans-serif;
     color: white;
@@ -39,6 +44,7 @@
     margin-left: 1.5rem;
     margin-top: 1.5rem;
   }
+
   .dato {
     font-family: "neuzeit-grotesk", sans-serif;
     font-weight: 700;
