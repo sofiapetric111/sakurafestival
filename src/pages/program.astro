@@ -1,7 +1,22 @@
 ---
-import Card from "../pages/components/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import Card from "../pages/components/Card.astro";
 ---
 <MainLayout>
+    <section class="grid_5">
     <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+</section>
 </MainLayout>
+
+<style>
+.grid_5{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: 4rem;
+    gap: 1%;
+}
+</style>
