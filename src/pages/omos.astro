@@ -15,8 +15,8 @@ import MainLayout from "../layouts/MainLayout.astro";
         Mr. Takaki is Honorary Consul of Denmark and he was appointed to the honorable position of ambassador of H.C. Andersen on the occasion of the 200th anniversary of H.C. Andersen’s birthday in 2005. The donated Sakura trees were planted in Langelinie Park.
       </p>
     </div>
-    <img src="assets/cherry.webp" alt="cherry" />
-    <img src="assets/bro.webp" alt="bro" />
+    <img src="/public/images/cherry2.webp" alt="cherry" class="cherry"/>
+    <img src="/public/images/bro.webp" alt="bro" class="bro" />
     <p>
       In Japan people love and admire Sakura blossom and almost everybody go out to enjoy its beauty together with families, friends, lovers, office-mates and so forth wherever and whenever Sakura bloom. Once a year Sakura connects people and people meet people under Sakura trees. It is also the
       utmost and fundamental goal of the Committee. The Committee has an honor to have Honorable Chairpersons H.E. the Ambassador of Japan to Denmark and Lord Mayor of the City of Copenhagen. The Committee consists of representatives of Japan related business, cultural and private organizations, the
@@ -24,15 +24,18 @@ import MainLayout from "../layouts/MainLayout.astro";
     </p>
   </div>
   <div class="boks3">
+    <div>
     <h2>Find</h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis explicabo quaerat laboriosam molestias nihil adipisci aliquid earum eum accusamus harum pariatur ex quos quod totam, doloremque dignissimos debitis voluptates officia.</p>
-    <img src="" alt="" />
+  </div>
+    <img src="/public/images/map2.webp" alt="" />
   </div>
 </MainLayout>
 
 <style>
   * {
     margin: 0;
+    padding: 0;
   }
   .boks1 {
     background-color: #263d3d;
@@ -43,15 +46,27 @@ import MainLayout from "../layouts/MainLayout.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #fbe4cf;
+    padding: 2rem;
+    gap: 2rem;
   }
-  .boks2 img {
-    width: 100%;
-  }
+ .boks2 img{width: 100%;}
   h1 {
     text-align: center;
   }
   .boks3 {
     background-color: #d5c0ac;
     color: #263d3d;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
-</style>
+  .boks3 img{width: 100%;}
+  .cherry{
+    padding-right: 4rem;
+  }
+  @media only screen and (max-width: 768px){
+    .boks2{
+      display: grid;
+      grid-template-columns: 1fr}  
+    }
+  </style>
