@@ -3,6 +3,41 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../pages/components/Card.astro";
 ---
 <MainLayout>
+    <div class="boks1">
+        <h1>PROGRAM </h1>
+      </div>
+      <div class="dato">
+        <h2>SATERDAY 22ND</h2>
+        <h2>SUNDAY 23ND</h2>
+      </div>
+      <section class="main_background">
+      <section>
+        <div class="filter">
+<div><img src="../images/tune.svg" alt="filter"><p>Filter</p></div>
+<p class="btm">MUSIC</p>
+<p class="btm">KIDS</p>
+<p class="btm">WORKSHOP</p>
+<p class="btm">FOOD/DRINKS</p>
+<p class="btm">ART</p>
+<p class="btm">SHOW</p>
+        </div>
+        <div class="Overkrift">
+            <h2>SATERDAY APRIL 22ND</h2>
+        </div>
+      </section>
+      <section class="animation">
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+        <p>MAIN STAGE</p>
+      </section>
     <section class="grid_5">
     <Card />
     <Card />
@@ -10,13 +45,97 @@ import Card from "../pages/components/Card.astro";
     <Card />
     <Card />
 </section>
+</section>
 </MainLayout>
 
 <style>
+    * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .main_background{background-color: rgb(251, 228, 207);}
+
+  .boks1 {
+    background-color: #263d3d;
+    padding: 2cm;
+    color: white;
+  }
+  h1 {
+    text-align: center;
+    font-size: 70px;
+  }
+  .dato{
+display: flex;
+justify-content: center;
+margin-top: -5%;
+margin-bottom: 5%;
+color: white;
+gap: 2%;
+  }
+
+  .dato h2{
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.filter{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding: 5%;
+    color: #263d3d;
+}
+
+.btm{
+    border: 1px solid #263d3d;
+    padding: 1%;
+    width: 100px;
+    text-align: center;
+    color: #263d3d;
+}
+
+.btm:hover{
+    color: white;
+    background-color: #263d3d;
+}
+
+.Overkrift h2{
+    text-align: center;
+    color: #263d3d;
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 2%;
+}
+/* styling af animation */
+.animation{
+    display: flex;
+    justify-content: flex-start;
+    background: #Fcaebb;
+    overflow: hidden;
+}
+
+.animation p{
+    color: #263d3d;
+    white-space: nowrap;
+    font-size: 20px;
+    padding: 1%;
+    animation: slide 2000ms linear infinite;
+}
+
+@keyframes slide{
+    0%{
+       transform: translateX(0); 
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
 .grid_5{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin-left: 4rem;
     gap: 1%;
+
 }
 </style>
