@@ -1,13 +1,28 @@
 ---
+
+/*
+ data.map((card)=>(
+          <Card 
+          link={"/cards/"+card.id}
+          image={`/thumbs/${card.image}`}
+          navn={card.navn}
+          date={card.date}
+          time={card.time}
+          scene={card.scene}
+          host={card.host}/>
+        ))
+*/
+const {link, image, name, date, time, scene, host, description}= Astro.props
+console.log(Astro.props)
 ---
 
 <section class="card">
     <div class="img_container">
-      <img src="/images/Wadaiko.jpg" class="card_image" alt="" />
+      <img src={image} class="card_image" alt="" />
       <img src="/images/favorite.png" class="favorite_img" alt="" />
       <div class="overlay_container">
         <div class="overlay_content">
-      <p class="text_white">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p class="text_white">{description}</p>
       <div class="favorite_container">
         <p class="add_program">Add to 'My Program'</p>
         <img src="/images/favorite_pink.png" class="favorite_pink" alt="">
@@ -16,9 +31,9 @@
     </div>
       </div>
     <div class="card_copy">
-      <p class="bold">Titel</p>
-      <p>Artist</p>
-      <p class="time">10.00-10.15</p>
+      <p class="bold">{name}</p>
+      <p>{host}</p>
+      <p class="time">{time}</p>
     </div>
   </section>
   
