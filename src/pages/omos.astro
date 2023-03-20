@@ -3,9 +3,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-  <div class="boks1">
+  <section class="sakura-tekst">
+    <div class="boks1">
+<img src="../images/sakura_img.svg" class="sakura_img" alt="sakura img">
     <h1>ABOUT US</h1>
   </div>
+<br>
+</section>
   <div class="boks2">
     <div>
       <h2>A celebration of the cherry blossom</h2>
@@ -37,18 +41,59 @@ import MainLayout from "../layouts/MainLayout.astro";
     margin: 0;
     padding: 0;
   }
+
+  .sakura_img{
+position: absolute;
+margin-left: 34%;
+z-index: -1;
+margin-top: -8%;
+width: 20%;
+  }
+
+  .sakura-tekst h1{
+    z-index: 2;
+  }
+
   .boks1 {
+<<<<<<< HEAD
     background-color: #263d3d;
+    padding: 1cm;
+=======
+    padding: 2cm;
+>>>>>>> sofia
+    color: white;
+    z-index: -2;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 70px;
+  }
+
+  .boks1 {
     padding: 2cm;
     color: white;
   }
+  
   .boks2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #fbe4cf;
     padding: 2rem;
     gap: 2rem;
+    line-height: 2rem;
   }
+
+  .boks2 h2{
+    font-size: 30px;
+    color: #263d3d;
+  }
+
+  .boks2 p{
+    margin-top: 5%;
+    color: #263d3d;
+  }
+  
  .boks2 img{width: 100%;}
   h1 {
     text-align: center;
@@ -64,6 +109,15 @@ import MainLayout from "../layouts/MainLayout.astro";
   .cherry{
     padding-right: 4rem;
   }
+
+  .boks3 h2{
+    font-size: 50px;
+  }
+
+  .boks3 p{
+    line-height: 2rem;
+  }
+
   @media only screen and (max-width: 768px){
     .boks2{
       display: grid;

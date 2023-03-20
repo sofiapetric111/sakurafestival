@@ -1,4 +1,18 @@
 ---
+/*
+ data.map((card)=>(
+          <Card 
+          link={"/cards/"+card.id}
+          image={`/thumbs/${card.image}`}
+          navn={card.navn}
+          date={card.date}
+          time={card.time}
+          scene={card.scene}
+          host={card.host}/>
+        ))
+*/
+const { link, image, name, date, time, scene, host, description } = Astro.props;
+console.log(Astro.props);
 ---
 
 <section class="card">
@@ -85,8 +99,27 @@
 
   .favorite_overlay {
     position: absolute;
+    text-align: center;
+  }
+
+  .text_white {
+    color: white;
+    font-weight: 800;
+  }
+
+  .overlay_container {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 61, 61, 0.4);
+    cursor: pointer;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    text-align: center;
     opacity: 0;
   }
 
