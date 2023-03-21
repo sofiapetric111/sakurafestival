@@ -6,7 +6,7 @@ const {program}=Astro.props;
     {
 program.map((program)=>(
         <Card 
-        link={"/events/" + program.slug}
+        link={"/program1/" + program.slug}
         image={`/images/${program.image}`}
         name={program.name}
         date={program.date}
@@ -15,4 +15,4 @@ program.map((program)=>(
         host={program.host}/>
       ))
     }
-  
+    

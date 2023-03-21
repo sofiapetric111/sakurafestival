@@ -1,24 +1,12 @@
 --- 
+import MainLayout from "../layouts/MainLayout.astro";
+
 const {description, image, name} = Astro.props;
 ---
+<MainLayout>
 
-<h1>{name}</h1>
-  <img src="../images/sakura_img.svg" class="sakura_img" alt="sakura img" />
-  <div class="boks2">
-    <img src={image} alt="tea" class="tea" />
-    <div>
-      <p>
-       {description}
-      </p>
-    </div>
-  </div>
-  <div class="boks3">
-    <div class="find_boks">
-      <h2>Find</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque laudantium similique cupiditate quo nesciunt numquam dolore iure odio aspernatur distinctio, asperiores veniam, architecto sunt deleniti! Suscipit placeat harum accusamus esse?</p>
-    </div>
-    <img src="public/images/find_kort.png" alt="kort" class="kort" />
-  </div>
+</MainLayout>
+
 <style>
   * {
     margin: 0;
