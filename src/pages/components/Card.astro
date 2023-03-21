@@ -15,7 +15,7 @@
 const {link, image, name, date, time, scene, host, description}= Astro.props
 console.log(Astro.props)
 ---
-
+<a href={link}>
 <section class="card">
     <div class="img_container">
       <img src={image} class="card_image" alt="" />
@@ -36,6 +36,7 @@ console.log(Astro.props)
       <p class="time">{time}</p>
     </div>
   </section>
+</a>
   
   <style>
     /* ----- billede i card ------ */

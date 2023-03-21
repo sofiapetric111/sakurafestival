@@ -1,7 +1,7 @@
 ---
 import { timerMessage } from "astro/dist/core/logger/core";
 import MainLayout from "../layouts/MainLayout.astro";
-import Card from "./components/Card.astro";
+import Sektion from "./components/Sektion.astro";
 
 const url = "https://toakybbeekybfigezlly.supabase.co/rest/v1/sakura_cards";
 
@@ -10,7 +10,15 @@ const options = {
     apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRvYWt5YmJlZWt5YmZpZ2V6bGx5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg5NTUwOTYsImV4cCI6MTk5NDUzMTA5Nn0.wD3fDP1_HxiJ8_NslNAWXNYg0OhGtytUve_lcQP9tgI",
 },};
 const response = await fetch(url, options);
-const data = await response.json();
+const allData = await response.json();
+
+const main = allData.filter((program) => program.scene === "MainStage" && program.date === 1);
+const second = allData.filter((program) => program.scene === "SecondStage" && program.date === 1);
+const lawn = allData.filter((program) => program.scene === "OnTheLawn" && program.date === 1);
+const main2 = allData.filter((program) => program.scene === "MainStage" && program.date === 2);
+const second2 = allData.filter((program) => program.scene === "SecondStage" && program.date === 2);
+const lawn2 = allData.filter((program) => program.scene === "OnTheLawn" && program.date === 2);
+
 ---
 <MainLayout>
   <section class="sakura-tekst">
@@ -53,7 +61,39 @@ const data = await response.json();
     <p>MAIN STAGE</p>
     </section>
     <section class="grid_5">
-      {
+      <Sektion program={main} scene="MainStage" date={1}/>
+      <!-- {
+        data.map((card)=>(
+          <Card 
+          link={"/card/" + card.id}
+          image={`/images/${card.image}`}
+          name={card.name}
+          date={card.date}
+          time={card.time}
+          scene={card.scene}
+          description={card.description}
+          host={card.host}/>
+        ))
+      } -->
+    </section>
+    <section class="animation">
+      <p>SECOND STAGE</p>
+      <p>SECOND STAGE</p>
+      <p>SECOND STAGE</p>
+      <p>SECOND STAGE</p>
+      <p>SECOND STAGE</p>
+      <p>SECOND STAGE</p>
+      <p>SECOND STAGE</p>
+      <p>SECOND STAGE</p>
+      <p>SECOND STAGE</p>
+      <p>SECOND STAGE</p>
+      <p>SECOND STAGE</p>
+      <p>SECOND STAGE</p>
+    </section>
+    <section class="grid_5">
+      <Sektion program={second} scene="SecondStage" date={1}/>
+
+      <!-- {
         data.map((card)=>(
           <Card 
           link={"/cards/"+card.id}
@@ -65,28 +105,7 @@ const data = await response.json();
           description={card.description}
           host={card.host}/>
         ))
-      }
-    </section>
-    <section class="animation">
-      <p>SECOND STAGE</p>
-      <p>SECOND STAGE</p>
-      <p>SECOND STAGE</p>
-      <p>SECOND STAGE</p>
-      <p>SECOND STAGE</p>
-      <p>SECOND STAGE</p>
-      <p>SECOND STAGE</p>
-      <p>SECOND STAGE</p>
-      <p>SECOND STAGE</p>
-      <p>SECOND STAGE</p>
-      <p>SECOND STAGE</p>
-      <p>SECOND STAGE</p>
-    </section>
-    <section class="grid_5">
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+      } -->
     </section>
     <section class="animation">
       <p>ON THE LAWN</p>
@@ -103,11 +122,21 @@ const data = await response.json();
       <p>ON THE LAWN</p>
     </section>
     <section class="grid_5">
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+      <Sektion program={lawn} scene="OnTheLawn" date= {1} />
+
+      <!-- {
+        data.map((card)=>(
+          <Card 
+          link={"/cards/"+card.id}
+          image={`/images/${card.image}`}
+          name={card.name}
+          date={card.date}
+          time={card.time}
+          scene={card.scene}
+          description={card.description}
+          host={card.host}/>
+        ))
+      } -->
     </section>
     <div class="Overkrift">
       <h2>SUNDAY APRIL 23ND</h2>
@@ -127,11 +156,20 @@ const data = await response.json();
       <p>MAIN STAGE</p>
     </section>
     <section class="grid_5">
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+      <Sektion program={main2} scene="MainStage" date={2}/>
+      <!-- {
+        data.map((card)=>(
+          <Card 
+          link={"/cards/"+card.id}
+          image={`/images/${card.image}`}
+          name={card.name}
+          date={card.date}
+          time={card.time}
+          scene={card.scene}
+          description={card.description}
+          host={card.host}/>
+        ))
+      } -->
     </section>
     <section class="animation2">
       <p>SECOND STAGE</p>
@@ -148,11 +186,20 @@ const data = await response.json();
       <p>SECOND STAGE</p>
     </section>
     <section class="grid_5">
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+      <Sektion program={second2} scene="SecondStage" date={2}/>
+      <!-- {
+        data.map((card)=>(
+          <Card 
+          link={"/cards/"+card.id}
+          image={`/images/${card.image}`}
+          name={card.name}
+          date={card.date}
+          time={card.time}
+          scene={card.scene}
+          description={card.description}
+          host={card.host}/>
+        ))
+      } -->
     </section>
     <section class="animation2">
       <p>ON THE LAWN</p>
@@ -167,6 +214,22 @@ const data = await response.json();
       <p>ON THE LAWN</p>
       <p>ON THE LAWN</p>
       <p>ON THE LAWN</p>
+    </section>
+    <section class="grid_5">
+      <Sektion program={lawn2} scene="OnTheLawn" date={2}/>
+      <!-- {
+        data.map((card)=>(
+          <Card 
+          link={"/cards/"+card.id}
+          image={`/images/${card.image}`}
+          name={card.name}
+          date={card.date}
+          time={card.time}
+          scene={card.scene}
+          description={card.description}
+          host={card.host}/>
+        ))
+      } -->
     </section>
   </section>
 </MainLayout>

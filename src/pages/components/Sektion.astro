@@ -1,0 +1,18 @@
+---
+import Card from "./Card.astro";
+const {program}=Astro.props;
+---
+
+    {
+program.map((program)=>(
+        <Card 
+        link={"/cards/"+program.id}
+        image={`/images/${program.image}`}
+        name={program.name}
+        date={program.date}
+        time={program.time}
+        description={program.description}
+        host={program.host}/>
+      ))
+    }
+  
