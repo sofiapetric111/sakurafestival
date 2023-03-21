@@ -1,73 +1,99 @@
-
 <article>
-    <div class="find">
-        <h1>FIND US</h1>
-        <p>Langelinie Park, Nordre Toldbod, 1259 København K</p>
-        <img src="../images/map.webp" alt="map">
+  <div class="find">
+    <h1>FIND US</h1>
+    <p>Langelinie Park, Nordre Toldbod, 1259 København K</p>
+    <img src="../images/map.webp" alt="map" />
+  </div>
+  <div>
+    <h1>CONTACT</h1>
+    <p>c/o Embassy of Japan Havneholmen 25, 9F. 1561 København V</p>
+    <div class="section">
+      <img src="../images/call.png" alt="call" />
+      <p>(+45) 3345 5121</p>
+      <img src="../images/mail.png" alt="mail" />
+      <p>info.cph@ch.mofa.go.jp</p>
+      <img src="../images/Volunteer.png" alt="volunteer" />
+      <p>Become a volunteer</p>
     </div>
-    <div>
-        <h1>CONTACT</h1>
-        <p>c/o Embassy of Japan 
-            Havneholmen 25, 9F.
-            1561 København V</p>
-        <div class="section">
-        <img src="../images/call.png" alt="call">
-        <p>(+45) 3345 5121</p>
-        <img src="../images/mail.png" alt="mail">
-        <p>info.cph@ch.mofa.go.jp</p>
-        <img src="../images/Volunteer.png" alt="volunteer">
-        <p>Become a volunteer</p> 
-     </div>
+  </div>
+  <div>
+    <h1>FOLLOW US</h1>
+    <div class="billeder">
+      <img src="../images/facebook.png" class="some" alt="facebook" />
+      <img src="../images/instagram.png" class="some" alt="instagram" />
+      <br />
+      <div class="social">
+        <img src="../images/Blomster.webp" class="some_billeder" alt="blomster" />
+        <img src="../images/Kendama.webp" class="some_billeder" alt="Kendama" />
+        <br />
+        <img src="../images/Aikido.webp" class="some_billeder" alt="Aikido" />
+        <img src="../images/Wadaiko.webp" class="some_billeder" alt=" Wadaiko" />
+      </div>
     </div>
-    <div>
-        <h1>FOLLOW US</h1>
-        <div class="billeder">
-        <img src="../images/facebook.png" alt="facebook">
-        <img src="../images/instagram.png" alt="instagram">
-        <br>
-        <img src="../images/Blomster.webp" alt="blomster">
-        <img src="../images/Kendama.webp" alt="Kendama">
-        <br>
-        <img src="../images/Aikido.webp" alt="Aikido">
-        <img src="../images/Wadaiko.webp" alt=" Wadaiko">
-        </div>
-    </div>
+  </div>
 </article>
 
 <style>
-article{
+  article {
     display: flex;
     color: white;
     justify-content: space-evenly;
     font-family: "neuzeit-grotesk", sans-serif;
-}
+  }
 
-h1{
+  h1 {
     font-size: 35px;
-}
+  }
 
-.section{
+  .section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-.section p{
+  }
+  .section p {
     margin-left: -7rem;
-}
-.find img{
+  }
+  .find img {
     max-width: 250px;
-}
+  }
 
-.billeder img{
-max-width: 80px;
-}
-@media only screen and (max-width: 768px){
-    article
-    {
+  .billeder img {
+    max-width: 80px;
+  }
+  @media only screen and (max-width: 768px) {
+    article {
       display: grid;
       grid-template-columns: 1fr;
-    text-align: center;
-}  
-
+      text-align: center;
     }
 
+    h1 {
+      font-size: 25px;
+    }
+
+    .section p {
+      margin-left: -3rem;
+      text-align: left;
+    }
+
+    .section img {
+      margin-left: 9rem;
+      width: 15%;
+    }
+
+    .some {
+      width: 10%;
+    }
+    .billeder img {
+      max-width: 100%;
+    }
+    .some_billeder {
+      width: 15%;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+  }
 </style>
