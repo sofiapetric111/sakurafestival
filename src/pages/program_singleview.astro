@@ -1,0 +1,98 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+---
+
+<MainLayout>
+  <h1>{name}</h1>
+  <img src={`/images/${program.image}`} class="sakura_img" alt="sakura img" />
+  <div class="boks2">
+    <img src="public/images/tea.png" alt="tea" class="tea" />
+    <div>
+      <h2>{name}</h2>
+      <p>
+       {description}
+      </p>
+    </div>
+  </div>
+  <div class="boks3">
+    <div class="find_boks">
+      <h2>Find</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque laudantium similique cupiditate quo nesciunt numquam dolore iure odio aspernatur distinctio, asperiores veniam, architecto sunt deleniti! Suscipit placeat harum accusamus esse?</p>
+    </div>
+    <img src="public/images/find_kort.png" alt="kort" class="kort" />
+  </div>
+</MainLayout>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    padding: 2cm;
+    color: white;
+    text-align: center;
+    font-size: 70px;
+  }
+  .sakura_img {
+    position: absolute;
+    margin-left: 39%;
+    z-index: -1;
+    margin-top: -19%;
+    width: 20%;
+  }
+  .boks2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fbe4cf;
+    padding: 2rem;
+    gap: 2rem;
+    margin-top: 2%;
+  }
+  .boks2 p {
+    margin-right: 25%;
+    line-height: 1.4rem;
+    margin-left: 2%;
+  }
+  .boks2 h2 {
+    margin-bottom: 1rem;
+    margin-left: 2%;
+  }
+
+  .tea {
+    width: 89%;
+    margin-left: 15%;
+  }
+  .boks3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fbe4cf;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  .find_boks {
+    background-color: #263d3d;
+    color: white;
+    padding: 4rem;
+    line-height: 1.5rem;
+    margin-left: 15%;
+    margin-right: -4.75%;
+  }
+  .find_boks h2 {
+    margin-bottom: 1.5rem;
+  }
+  .kort {
+    width: 78%;
+  }
+  @media only screen and (max-width: 768px) {
+    .boks2 {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
