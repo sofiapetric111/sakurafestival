@@ -21,16 +21,68 @@ return data.map((program) => ({
 
 const { program } = Astro.props;
 ---
-<Header/>
+<MainLayout>
 <main>
-<section>
-    <h1>{program.name}</h1>
+<section class="main_background">
+    <div class="grid_1_1">
+    <img src={`/images/${program.image}`} class="program_img" alt="image"/>
+        <div class="program_info">
+    <h2>{program.name}</h2>
     <p>{program.description}</p>
-    <img src={`/images/${program.image}`} alt="image"/>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur laborum iusto praesentium? Aut totam dicta tempora dolorum porro. Eos et omnis optio corporis harum culpa placeat fugiat blanditiis architecto amet, dicta est ipsam maiores facilis cum! Maxime, aut fugiat modi quisquam impedit neque consectetur nostrum, quo minus nulla est temporibus!</p>
+        </div>
+</div>
+<div class="boks3">
+    <div class="find_tekst">
+      <h2>Find this event</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis explicabo quaerat laboriosam molestias nihil adipisci aliquid earum eum accusamus harum pariatur ex quos quod totam, doloremque dignissimos debitis voluptates officia.</p>
+    </div>
+    <img src="/public/images/map2.webp" alt="" />
+  </div>
 </section>
 </main>
-<Footer/>
+</MainLayout>
 
 <style>
+  .main_background
+  {background-color: rgb(251, 228, 207);}
+
+  h2, p 
+  {color:#263d3d}
+
+  h2 {
+  font-weight: 500;
+font-size: 40px;
+}
+
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+    .program_img {
+    margin-left: 25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    }
+    
+    .program_info {
+    width: 400px;
+    }
+
+    .boks3 {
+    background-color: #d5c0ac;
+    color: #263d3d;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .boks3 img {
+    width: 100%;
+  }
+
+  .find_tekst{
+    padding: 1rem;
+}
 
 </style>

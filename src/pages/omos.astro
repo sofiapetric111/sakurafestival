@@ -30,8 +30,8 @@ import MainLayout from "../layouts/MainLayout.astro"
     </p>
   </div>
   <div class="boks3">
-    <div>
-      <h2>Find</h2>
+    <div class="find_tekst">
+      <h2>Find Us</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis explicabo quaerat laboriosam molestias nihil adipisci aliquid earum eum accusamus harum pariatur ex quos quod totam, doloremque dignissimos debitis voluptates officia.</p>
     </div>
     <img src="/public/images/map2.webp" alt="" />
@@ -72,12 +72,14 @@ import MainLayout from "../layouts/MainLayout.astro"
     background-color: #fbe4cf;
     padding: 2rem;
     gap: 2rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
   }
 
   .boks2 h2 {
     font-size: 30px;
     color: #263d3d;
+    font-weight: 500;
+    font-size: 40px;
   }
 
   .boks2 p {
@@ -106,12 +108,18 @@ import MainLayout from "../layouts/MainLayout.astro"
   }
 
   .boks3 h2 {
-    font-size: 50px;
+    font-weight: 500;
+    font-size: 40px;
   }
 
   .boks3 p {
-    line-height: 2rem;
+    line-height: 1.5rem;
+    
   }
+
+  .find_tekst{
+    padding: 1rem;
+}
 
   @media only screen and (max-width: 600px) {
     .boks2 {
