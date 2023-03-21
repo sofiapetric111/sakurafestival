@@ -29,7 +29,7 @@ const { program } = Astro.props;
       <div class="grid_1_1">
         <div class="program_info">
           <h2>{program.name}</h2>
-
+          <h3>{program.time}</h3>
           <div class="pic_text">
             <img src={`/images/${program.image}`} class="program_img" alt="image" />
             <p>{program.description}</p>
@@ -63,6 +63,15 @@ const { program } = Astro.props;
     font-weight: 500;
     font-size: 40px;
     text-align: center;
+  }
+  h3 {
+    color: #263d3d;
+    font-family: "neuzeit-grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
   }
   .pic_text {
     display: grid;
