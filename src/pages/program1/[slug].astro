@@ -32,7 +32,7 @@ const { program } = Astro.props;
           <h3>{program.time}</h3>
           <div class="pic_text">
             <img src={`/images/${program.image}`} class="program_img" alt="image" />
-            <p>{program.description}</p>
+            <p class="description">{program.description}</p>
           </div>
         </div>
         <div class="boks3">
@@ -103,5 +103,25 @@ const { program } = Astro.props;
 
   .find_text_pic {
     margin: 0 3rem 0 3rem;
+  }
+  @media only screen and (max-width: 600px) {
+    .pic_text {
+      grid-template-columns: 1fr;
+    }
+
+    .grid_1_1 {
+      grid-template-columns: 1fr;
+    }
+    .description {
+      grid-row: 1/2;
+    }
+
+    img {
+      margin-left: 1rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      text-align: center;
+    }
   }
 </style>
