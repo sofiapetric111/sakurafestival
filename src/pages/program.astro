@@ -6,9 +6,10 @@ import Sektion from "../components/Sektion.astro";
 const url = "https://toakybbeekybfigezlly.supabase.co/rest/v1/sakura_cards";
 
 const options = {
-  headers:{
-    apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRvYWt5YmJlZWt5YmZpZ2V6bGx5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg5NTUwOTYsImV4cCI6MTk5NDUzMTA5Nn0.wD3fDP1_HxiJ8_NslNAWXNYg0OhGtytUve_lcQP9tgI",
-},};
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRvYWt5YmJlZWt5YmZpZ2V6bGx5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg5NTUwOTYsImV4cCI6MTk5NDUzMTA5Nn0.wD3fDP1_HxiJ8_NslNAWXNYg0OhGtytUve_lcQP9tgI",
+  },
+};
 const response = await fetch(url, options);
 const allData = await response.json();
 
@@ -18,12 +19,12 @@ const lawn = allData.filter((program) => program.scene === "OnTheLawn" && progra
 const main2 = allData.filter((program) => program.scene === "MainStage" && program.date === 2);
 const second2 = allData.filter((program) => program.scene === "SecondStage" && program.date === 2);
 const lawn2 = allData.filter((program) => program.scene === "OnTheLawn" && program.date === 2);
-
 ---
+
 <MainLayout>
   <section class="sakura-tekst">
     <div class="boks1">
-      <img src="../images/sakura_img.svg" alt="billede" class="sakura_img">
+      <img src="../images/sakura_img.svg" alt="billede" class="sakura_img" />
       <h1>PROGRAM</h1>
     </div>
     <div class="dato">
@@ -34,7 +35,7 @@ const lawn2 = allData.filter((program) => program.scene === "OnTheLawn" && progr
   <section class="main_background">
     <section>
       <div class="filter">
-        <div> <img src="../images/tune.svg" alt="filter"><p>Filter</p></div>
+        <div><img src="../images/tune.svg" alt="filter" /><p>Filter</p></div>
         <p class="btm">MUSIC</p>
         <p class="btm">KIDS</p>
         <p class="btm">WORKSHOP</p>
@@ -47,21 +48,21 @@ const lawn2 = allData.filter((program) => program.scene === "OnTheLawn" && progr
       </div>
     </section>
     <section class="animation">
-    <p>MAIN STAGE</p>
-    <p>MAIN STAGE</p>
-    <p>MAIN STAGE</p>
-    <p>MAIN STAGE</p>
-    <p>MAIN STAGE</p>
-    <p>MAIN STAGE</p>
-    <p>MAIN STAGE</p>
-    <p>MAIN STAGE</p>
-    <p>MAIN STAGE</p>
-    <p>MAIN STAGE</p>
-    <p>MAIN STAGE</p>
-    <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
+      <p>MAIN STAGE</p>
     </section>
     <section class="grid_5">
-      <Sektion program={main} scene="MainStage" date={1}/>
+      <Sektion program={main} scene="MainStage" date={1} />
       <!-- {
         data.map((card)=>(
           <Card 
@@ -91,7 +92,7 @@ const lawn2 = allData.filter((program) => program.scene === "OnTheLawn" && progr
       <p>SECOND STAGE</p>
     </section>
     <section class="grid_5">
-      <Sektion program={second} scene="SecondStage" date={1}/>
+      <Sektion program={second} scene="SecondStage" date={1} />
 
       <!-- {
         data.map((card)=>(
@@ -122,7 +123,7 @@ const lawn2 = allData.filter((program) => program.scene === "OnTheLawn" && progr
       <p>ON THE LAWN</p>
     </section>
     <section class="grid_5">
-      <Sektion program={lawn} scene="OnTheLawn" date= {1} />
+      <Sektion program={lawn} scene="OnTheLawn" date={1} />
 
       <!-- {
         data.map((card)=>(
@@ -156,7 +157,7 @@ const lawn2 = allData.filter((program) => program.scene === "OnTheLawn" && progr
       <p>MAIN STAGE</p>
     </section>
     <section class="grid_5">
-      <Sektion program={main2} scene="MainStage" date={2}/>
+      <Sektion program={main2} scene="MainStage" date={2} />
       <!-- {
         data.map((card)=>(
           <Card 
@@ -186,7 +187,7 @@ const lawn2 = allData.filter((program) => program.scene === "OnTheLawn" && progr
       <p>SECOND STAGE</p>
     </section>
     <section class="grid_5">
-      <Sektion program={second2} scene="SecondStage" date={2}/>
+      <Sektion program={second2} scene="SecondStage" date={2} />
       <!-- {
         data.map((card)=>(
           <Card 
@@ -216,7 +217,7 @@ const lawn2 = allData.filter((program) => program.scene === "OnTheLawn" && progr
       <p>ON THE LAWN</p>
     </section>
     <section class="grid_5">
-      <Sektion program={lawn2} scene="OnTheLawn" date={2}/>
+      <Sektion program={lawn2} scene="OnTheLawn" date={2} />
       <!-- {
         data.map((card)=>(
           <Card 
@@ -234,24 +235,25 @@ const lawn2 = allData.filter((program) => program.scene === "OnTheLawn" && progr
   </section>
 </MainLayout>
 <style>
-    * {
+  * {
     margin: 0;
     padding: 0;
   }
 
-  .main_background
-  {background-color: rgb(251, 228, 207);}
-
-  /* section 1 */
-  .sakura_img{
-position: absolute;
-margin-left: 34%;
-z-index: -1;
-margin-top: -8%;
-width: 20%;
+  .main_background {
+    background-color: rgb(251, 228, 207);
   }
 
-  .sakura-tekst h1{
+  /* section 1 */
+  .sakura_img {
+    position: absolute;
+    margin-left: 34%;
+    z-index: -1;
+    margin-top: -8%;
+    width: 20%;
+  }
+
+  .sakura-tekst h1 {
     z-index: 2;
   }
 
@@ -265,106 +267,115 @@ width: 20%;
     text-align: center;
     font-size: 70px;
   }
-  
-  .dato{
-display: flex;
-justify-content: center;
-margin-top: -5%;
-margin-bottom: 5%;
-color: white;
-gap: 2%;
+
+  .dato {
+    display: flex;
+    justify-content: center;
+    margin-top: -5%;
+    margin-bottom: 5%;
+    color: white;
+    gap: 2%;
   }
 
-  .dato h2{
+  .dato h2 {
     font-weight: 100;
     font-size: 15px;
-}
+  }
 
- /* section 2 med cards */
-.filter{
+  /* section 2 med cards */
+  .filter {
     display: flex;
     justify-content: center;
     gap: 1%;
     padding: 3%;
     color: #263d3d;
-}
+  }
 
-.btm{
+  .btm {
     border: 1px solid #263d3d;
     padding: 1%;
     width: 100px;
     text-align: center;
     color: #263d3d;
-}
+  }
 
-.btm:hover{
+  .btm:hover {
     color: white;
     background-color: #263d3d;
-}
+  }
 
-.Overkrift h2{
+  .Overkrift h2 {
     text-align: center;
     color: #263d3d;
     font-weight: 500;
     font-size: 40px;
     margin-bottom: 2%;
-}
-/* styling af animation */
-.animation{
+  }
+  /* styling af animation */
+  .animation {
     display: flex;
     justify-content: flex-start;
-    background: #Fcaebb;
+    background: #fcaebb;
     overflow: hidden;
-}
+  }
 
-.animation p{
+  .animation p {
     color: #263d3d;
     white-space: nowrap;
     font-size: 20px;
     padding: 1%;
     animation: slide 2000ms linear infinite;
-}
+  }
 
-@keyframes slide{
-    0%{
-       transform: translateX(0); 
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
     }
-    100%{
-        transform: translateX(-100%);
+    100% {
+      transform: translateX(-100%);
     }
-}
+  }
 
-/* styling af animation 2 */
-.animation2{
+  /* styling af animation 2 */
+  .animation2 {
     display: flex;
     justify-content: flex-start;
     background: #263d3d;
     overflow: hidden;
-}
+  }
 
-.animation2 p{
-    color: #Fcaebb;
+  .animation2 p {
+    color: #fcaebb;
     white-space: nowrap;
     font-size: 20px;
     padding: 1%;
     animation: slide 2000ms linear infinite;
-}
+  }
 
-@keyframes slide{
-    0%{
-       transform: translateX(0); 
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
     }
-    100%{
-        transform: translateX(-100%);
+    100% {
+      transform: translateX(-100%);
     }
-}
+  }
 
- /* gris*/
-.grid_5{
+  /* grid*/
+  .grid_5 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1%;
     margin-left: 4%;
     margin-bottom: 4%;
-}
+  }
+  @media only screen and (max-width: 600px) {
+    .grid_5 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1%;
+      margin-left: 4%;
+      margin-bottom: 4%;
+    }
+  }
 </style>
