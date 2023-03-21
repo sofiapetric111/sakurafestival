@@ -1,8 +1,5 @@
 ---
-
 import MainLayout from "../../layouts/MainLayout.astro";
-import Singleview from "../Singleview.astro";
-
 
 export async function getStaticPaths(){
     const url = "https://toakybbeekybfigezlly.supabase.co/rest/v1/sakura_cards";
@@ -17,17 +14,12 @@ return data.map((program)=> ({
     params: {slug: program.slug},
     props: {program},
 }));
-}
-
-
+};
 
 const {program} = Astro.props;
 ---
-<main>
-<h1>{program.name}</h1>
-<p>{program.description}</p>
-<img src={program.image} alt="image"/>
-</main>
 <MainLayout>
-    <Singleview />
+    <h1>{program.name}</h1>
+    <p>{program.description}</p>
+    <img src={program.image} alt="image"/>
 </MainLayout>
