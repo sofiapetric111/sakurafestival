@@ -1,0 +1,20 @@
+---
+import Card from "./Card.astro";
+const {indhold, filter}=Astro.props;
+---
+<h2>{filter}</h2>
+<section class="grid_5">
+    {
+      indhold.map((card)=>(
+        <Card 
+        link={"/cards/"+card.id}
+        image={`/images/${card.image}`}
+        name={card.name}
+        date={card.date}
+        time={card.time}
+        scene={card.scene}
+        description={card.description}
+        host={card.host}/>
+      ))
+    }
+  </section>

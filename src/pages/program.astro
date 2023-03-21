@@ -2,6 +2,7 @@
 import { timerMessage } from "astro/dist/core/logger/core";
 import MainLayout from "../layouts/MainLayout.astro";
 import Card from "./components/Card.astro";
+import Sektion from "./components/Sektion.astro";
 
 const url = "https://toakybbeekybfigezlly.supabase.co/rest/v1/sakura_cards";
 
@@ -11,6 +12,10 @@ const options = {
 },};
 const response = await fetch(url, options);
 const data = await response.json();
+
+const MainStage = data.filter(
+  (card) => card.name === 2 && card.scene === "Main Stage"
+)
 ---
 <MainLayout>
   <section class="sakura-tekst">
@@ -56,7 +61,7 @@ const data = await response.json();
       {
         data.map((card)=>(
           <Card 
-          link={"/cards/"+card.id}
+          link={"/card/" + card.id}
           image={`/images/${card.image}`}
           name={card.name}
           date={card.date}
@@ -82,7 +87,19 @@ const data = await response.json();
       <p>SECOND STAGE</p>
     </section>
     <section class="grid_5">
-     
+      {
+        data.map((card)=>(
+          <Card 
+          link={"/cards/"+card.id}
+          image={`/images/${card.image}`}
+          name={card.name}
+          date={card.date}
+          time={card.time}
+          scene={card.scene}
+          description={card.description}
+          host={card.host}/>
+        ))
+      }
     </section>
     <section class="animation">
       <p>ON THE LAWN</p>
@@ -99,7 +116,19 @@ const data = await response.json();
       <p>ON THE LAWN</p>
     </section>
     <section class="grid_5">
-     
+      {
+        data.map((card)=>(
+          <Card 
+          link={"/cards/"+card.id}
+          image={`/images/${card.image}`}
+          name={card.name}
+          date={card.date}
+          time={card.time}
+          scene={card.scene}
+          description={card.description}
+          host={card.host}/>
+        ))
+      }
     </section>
     <div class="Overkrift">
       <h2>SUNDAY APRIL 23ND</h2>
@@ -119,7 +148,19 @@ const data = await response.json();
       <p>MAIN STAGE</p>
     </section>
     <section class="grid_5">
-     
+      {
+        data.map((card)=>(
+          <Card 
+          link={"/cards/"+card.id}
+          image={`/images/${card.image}`}
+          name={card.name}
+          date={card.date}
+          time={card.time}
+          scene={card.scene}
+          description={card.description}
+          host={card.host}/>
+        ))
+      }
     </section>
     <section class="animation2">
       <p>SECOND STAGE</p>
@@ -136,7 +177,19 @@ const data = await response.json();
       <p>SECOND STAGE</p>
     </section>
     <section class="grid_5">
-     
+      {
+        data.map((card)=>(
+          <Card 
+          link={"/cards/"+card.id}
+          image={`/images/${card.image}`}
+          name={card.name}
+          date={card.date}
+          time={card.time}
+          scene={card.scene}
+          description={card.description}
+          host={card.host}/>
+        ))
+      }
     </section>
     <section class="animation2">
       <p>ON THE LAWN</p>
