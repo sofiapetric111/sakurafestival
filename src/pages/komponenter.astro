@@ -1,0 +1,68 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
+import Sektion from "../components/Sektion.astro";
+import Singleview from "../components/Singleview.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="{Astro.generator}" />
+    <link rel="stylesheet" href="https://use.typekit.net/sea3qcp.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/sea3qcp.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/sea3qcp.css" />
+    <title>Komponenter</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="grid_1-8">
+        <h1>Header</h1>
+        <div class="header">
+          <Header />
+        </div>
+      </div>
+      <div class="grid_1-8">
+        <h1>Card</h1>
+        <div class="card">
+          <Card />
+        </div>
+      </div>
+      <div class="grid_1-8">
+        <h1>Footer</h1>
+        <div class="footer">
+          <Footer />
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
+<style>
+  body {
+    background-color: #263d3d;
+    margin-top: 2rem;
+  }
+
+  .grid_1-8 {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    margin-bottom: 5rem;
+    border: #3b5e5e solid 1px;
+    padding: 0.5rem;
+  }
+
+  .card {
+    background-color: #3b5e5e;
+    margin-right: 81.25%;
+  }
+  h1 {
+    font-family: "neuzeit-grotesk", sans-serif;
+    color: white;
+    margin-top: 0rem;
+  }
+</style>
